@@ -16,6 +16,13 @@ public class Player : MonoBehaviour
     [Header("Animation Setup")]
     public float jumpScaleY = 1.5f;
     public float jumpScaleX = 0.7f;
+
+    public float landingScaleY = 0.7f;
+    public float landingScaleX = 1.5f;
+
+
+    public float fallingThreshold = -6f;
+    public bool falling = false;
     public float animationDuration = .3f;
     public Ease ease = Ease.OutBack;
 
@@ -23,8 +30,48 @@ public class Player : MonoBehaviour
     //private bool _isRunning = false;
     private void Update()
     {
+        checkIfPlayerisFalling();
         HandleJump();
         HandleMoviment();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //COLOQUEI UMA TAG DE GROUND NOS BLOCOS DE CHÃO PARA VERIFICAR A QUEDA
+        if (collision.gameObject.CompareTag("Ground") && falling)
+        {
+            handleScaleLanding();
+        }
+    }
+
+    private void handleScaleLanding()
+    {
+        //A MESMA DO JUMPING SÓ QUE INVERTIDA
+        myRigidbody.transform.DOScaleY(landingScaleY, animationDuration).SetLoops(2, LoopType.Yoyo); //Quantidade de loops e o tipo de loop
+        myRigidbody.transform.DOScaleX(landingScaleX, animationDuration).SetLoops(2, LoopType.Yoyo); //Quantidade de loops e o tipo de loop
+    }
+
+
+    private void checkIfPlayerisFalling()
+    {
+        //SE A VELOCIADE DE QUEDA DO PLAYER ESTIVER ACIMA DO THRESHOLD, É CONSIDERADO QUE ELE ESTÁ CAINDO, A FUNÇÃO É CHAMADA NO UPDATE PARA SEMPRE VERIFICAR SE ELE ESTÁ CAINDO
+        if (myRigidbody.velocity.y < fallingThreshold)
+        {
+            falling = true;
+        }
+        else
+        {
+            falling = false;
+        }
+    }
+
+
+
+
+    private void handleScaleJump()
+    {
+        myRigidbody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease); //Quantidade de loops e o tipo de loop
+        myRigidbody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease); //Quantidade de loops e o tipo de loop
     }
 
     private void HandleMoviment()
@@ -69,20 +116,8 @@ public class Player : MonoBehaviour
 
             DOTween.Kill(myRigidbody.transform);
             handleScaleJump();
+
         }
-    }
-
-
-    private void handleScaleJump()
-    {
-        myRigidbody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease); //Quantidade de loops e o tipo de loop
-        myRigidbody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease); //Quantidade de loops e o tipo de loop
-    }
-
-      private void handleScaleLanding()
-    {
-        myRigidbody.transform.DOScaleY(jumpScaleY, animationDuration).SetLoops(2, LoopType.Yoyo); //Quantidade de loops e o tipo de loop
-        myRigidbody.transform.DOScaleX(jumpScaleX, animationDuration).SetLoops(2, LoopType.Yoyo); //Quantidade de loops e o tipo de loop
     }
 
 }
