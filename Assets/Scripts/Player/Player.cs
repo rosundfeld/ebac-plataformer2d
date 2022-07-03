@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
     public Ease ease = Ease.OutBack;
 
     private float _currentSpeed;
-    //private bool _isRunning = false;
     private void Update()
     {
         checkIfPlayerisFalling();
@@ -37,7 +36,6 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //COLOQUEI UMA TAG DE GROUND NOS BLOCOS DE CHÃO PARA VERIFICAR A QUEDA
         if (collision.gameObject.CompareTag("Ground") && falling)
         {
             handleScaleLanding();
@@ -46,15 +44,13 @@ public class Player : MonoBehaviour
 
     private void handleScaleLanding()
     {
-        //A MESMA DO JUMPING SÓ QUE INVERTIDA
         myRigidbody.transform.DOScaleY(landingScaleY, animationDuration).SetLoops(2, LoopType.Yoyo); //Quantidade de loops e o tipo de loop
-        myRigidbody.transform.DOScaleX(landingScaleX, animationDuration).SetLoops(2, LoopType.Yoyo); //Quantidade de loops e o tipo de loop
+        myRigidbody.transform.DOScaleX(landingScaleX, animationDuration).SetLoops(2, LoopType.Yoyo); 
     }
 
 
     private void checkIfPlayerisFalling()
     {
-        //SE A VELOCIADE DE QUEDA DO PLAYER ESTIVER ACIMA DO THRESHOLD, É CONSIDERADO QUE ELE ESTÁ CAINDO, A FUNÇÃO É CHAMADA NO UPDATE PARA SEMPRE VERIFICAR SE ELE ESTÁ CAINDO
         if (myRigidbody.velocity.y < fallingThreshold)
         {
             falling = true;

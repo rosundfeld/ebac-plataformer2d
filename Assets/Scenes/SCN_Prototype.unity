@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 540679715}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 562722083}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,7 +687,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1027659025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -800,6 +800,10 @@ MonoBehaviour:
   forceJump: 15
   jumpScaleY: 1.5
   jumpScaleX: 0.7
+  landingScaleY: 0.7
+  landingScaleX: 1.5
+  fallingThreshold: -6
+  falling: 0
   animationDuration: 0.3
   ease: 27
 --- !u!114 &1027659029
@@ -830,7 +834,7 @@ GameObject:
   - component: {fileID: 1221843761}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
