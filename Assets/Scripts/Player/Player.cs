@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
     public float animationDuration = .3f;
     public Ease ease = Ease.OutBack;
 
+    [Header("Animation Player")]
+    public string boolRun = "Run";
+    public Animator animator;
+
     private float _currentSpeed;
     private void Update()
     {
@@ -42,10 +46,11 @@ public class Player : MonoBehaviour
         }
     }
 
+
     private void handleScaleLanding()
     {
         myRigidbody.transform.DOScaleY(landingScaleY, animationDuration).SetLoops(2, LoopType.Yoyo); //Quantidade de loops e o tipo de loop
-        myRigidbody.transform.DOScaleX(landingScaleX, animationDuration).SetLoops(2, LoopType.Yoyo); 
+        myRigidbody.transform.DOScaleX(landingScaleX, animationDuration).SetLoops(2, LoopType.Yoyo);
     }
 
 
@@ -86,11 +91,27 @@ public class Player : MonoBehaviour
         {
             //myRigidbody.MovePosition(myRigidbody.position + velocity * Time.deltaTime); //possição do personagem + a posição que ele quer andar + deltaTime para normalizar o tempo
             myRigidbody.velocity = new Vector2(Input.GetKey(KeyCode.LeftShift) ? speedRun : speed, myRigidbody.velocity.y); //IF TERNÁRIO, BRABO
+
+            if(myRigidbody.transform.localScale.x != 1){
+                myRigidbody.transform.DOScaleX(1, .1f);
+            }
+
+            animator.SetBool(boolRun, true);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             //myRigidbody.MovePosition(myRigidbody.position - velocity * Time.deltaTime);
             myRigidbody.velocity = new Vector2(Input.GetKey(KeyCode.LeftShift) ? -speedRun : -speed, myRigidbody.velocity.y);
+
+            if(myRigidbody.transform.localScale.x != -1){
+                myRigidbody.transform.DOScaleX(-1, .1f);
+            }
+
+            animator.SetBool(boolRun, true);
+        }
+        else
+        {
+            animator.SetBool(boolRun, false);
         }
 
         if (myRigidbody.velocity.x > 0)
