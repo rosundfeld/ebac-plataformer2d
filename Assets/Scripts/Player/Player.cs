@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
     public Animator animator;
     private void Update()
     {
-        Debug.Log(myRigidbody.velocity.x);
         checkIfPlayerisFalling();
         HandleJump();
         HandleMoviment();
