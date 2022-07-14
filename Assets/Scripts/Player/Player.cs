@@ -12,13 +12,15 @@ public class Player : MonoBehaviour
     public float speed;
     public float speedRun;
     public float forceJump;
+    private float _currentSpeed;
+
 
     [Header("Animation Setup")]
-    public float jumpScaleY = 1.5f;
-    public float jumpScaleX = 0.7f;
+    public float jumpScaleY = 1.2f;
+    public float jumpScaleX = 0.9f;
 
-    public float landingScaleY = 0.7f;
-    public float landingScaleX = 1.5f;
+    public float landingScaleY = 0.9f;
+    public float landingScaleX = 1.2f;
 
 
     public float fallingThreshold = -6f;
@@ -28,11 +30,15 @@ public class Player : MonoBehaviour
 
     [Header("Animation Player")]
     public string boolRun = "Run";
-    public Animator animator;
+    public string boolWalk = "Walk";
+    public string boolLand = "Land";
+    public string triggerJump = "Jump";
 
-    private float _currentSpeed;
+
+    public Animator animator;
     private void Update()
     {
+        Debug.Log(myRigidbody.velocity.x);
         checkIfPlayerisFalling();
         HandleJump();
         HandleMoviment();
@@ -43,6 +49,19 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") && falling)
         {
             handleScaleLanding();
+            animator.SetBool(boolLand, false);
+        }
+        else
+        {
+            animator.SetBool(boolLand, true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            animator.SetBool(triggerJump, false);
         }
     }
 
@@ -77,41 +96,49 @@ public class Player : MonoBehaviour
 
     private void HandleMoviment()
     {
-        //ESSE É BACANA
-        // if (Input.GetKey(KeyCode.LeftShift))
-        // {
-        //     _currentSpeed = speedRun;
-        // }
-        // else
-        // {
-        //     _currentSpeed = speed;
-        // }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            _currentSpeed = speedRun;
+            if((myRigidbody.velocity.x > 1 || myRigidbody.velocity.x < -1)) {
+                animator.SetBool(boolRun, true);
+            }
+        }
+        else
+        {
+            _currentSpeed = speed;
+            animator.SetBool(boolRun, false);
+        }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            //myRigidbody.MovePosition(myRigidbody.position + velocity * Time.deltaTime); //possição do personagem + a posição que ele quer andar + deltaTime para normalizar o tempo
-            myRigidbody.velocity = new Vector2(Input.GetKey(KeyCode.LeftShift) ? speedRun : speed, myRigidbody.velocity.y); //IF TERNÁRIO, BRABO
+            //myRigidbody.velocity = new Vector2(Input.GetKey(KeyCode.LeftShift) ? speedRun : speed, myRigidbody.velocity.y); //IF TERNÁRIO, BRABO
+            //myRigidbody.MovePosition(myRigidbody.position + speed * Time.deltaTime); //possição do personagem + a posição que ele quer andar + deltaTime para normalizar o tempo
 
-            if(myRigidbody.transform.localScale.x != 1){
+            myRigidbody.velocity = new Vector2(_currentSpeed, myRigidbody.velocity.y);
+            if (myRigidbody.transform.localScale.x != 1)
+            {
                 myRigidbody.transform.DOScaleX(1, .1f);
             }
 
-            animator.SetBool(boolRun, true);
+            animator.SetBool(boolWalk, true);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             //myRigidbody.MovePosition(myRigidbody.position - velocity * Time.deltaTime);
-            myRigidbody.velocity = new Vector2(Input.GetKey(KeyCode.LeftShift) ? -speedRun : -speed, myRigidbody.velocity.y);
+            //myRigidbody.velocity = new Vector2(Input.GetKey(KeyCode.LeftShift) ? -speedRun : -speed, myRigidbody.velocity.y);
+            myRigidbody.velocity = new Vector2(-_currentSpeed, myRigidbody.velocity.y);
 
-            if(myRigidbody.transform.localScale.x != -1){
+            if (myRigidbody.transform.localScale.x != -1)
+            {
                 myRigidbody.transform.DOScaleX(-1, .1f);
             }
 
-            animator.SetBool(boolRun, true);
+            animator.SetBool(boolWalk, true);
         }
         else
         {
-            animator.SetBool(boolRun, false);
+            animator.SetBool(boolWalk, false);
         }
 
         if (myRigidbody.velocity.x > 0)
@@ -132,8 +159,8 @@ public class Player : MonoBehaviour
             myRigidbody.transform.localScale = Vector2.one;
 
             DOTween.Kill(myRigidbody.transform);
+            animator.SetBool(triggerJump, true);
             handleScaleJump();
-
         }
     }
 
