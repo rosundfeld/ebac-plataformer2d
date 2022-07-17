@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6920624796586647924}
   - component: {fileID: 7456608926792561719}
   - component: {fileID: 8280980334149994107}
+  - component: {fileID: 4883633877397125274}
   m_Layer: 0
   m_Name: PFB_Coin
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6920624796586647927}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.4157166, y: 0.07605028, z: 0.05660935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -147,3 +148,14 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.03809476}
   serializedVersion: 2
   m_Radius: 0.8
+--- !u!210 &4883633877397125274
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920624796586647927}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 14
