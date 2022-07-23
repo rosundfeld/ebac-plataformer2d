@@ -207,7 +207,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9072440100847685840}
   m_Bounds:
-    m_Center: {x: 0.14424157, y: -0.12601674, z: 0}
+    m_Center: {x: 0.14424133, y: -0.12601662, z: 0}
     m_Extent: {x: 0.51411974, y: 0.57256997, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -314,8 +314,8 @@ MonoBehaviour:
   - {fileID: 2824275231970500835}
   - {fileID: 6366582078689648173}
   m_Bounds:
-    m_Center: {x: -0.0024151802, y: 0.002145052, z: 0}
-    m_Extent: {x: 2.912585, y: 3.347855, z: 0}
+    m_Center: {x: -0.0024147034, y: 0.0021455288, z: 0}
+    m_Extent: {x: 2.9125853, y: 3.347855, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -330,6 +330,11 @@ GameObject:
   - component: {fileID: 8073972946613542793}
   - component: {fileID: 2403329696302037006}
   - component: {fileID: 3701316344789163291}
+  - component: {fileID: 2088867800703909083}
+  - component: {fileID: 2088867800703909082}
+  - component: {fileID: 2088867800703909084}
+  - component: {fileID: 2088867800703909088}
+  - component: {fileID: 2088867800703909089}
   m_Layer: 0
   m_Name: PFB_Enemy_1
   m_TagString: Untagged
@@ -392,6 +397,108 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
+--- !u!50 &2088867800703909083
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!61 &2088867800703909082
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.13156128, y: 3.3098028}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.977436, y: 6.6779037}
+  m_EdgeRadius: 0
+--- !u!114 &2088867800703909084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7e7ab5938c0f0469245e8f53f99bfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  animator: {fileID: 2403329696302037006}
+  triggerAttack: Attack
+  triggerDeath: Death
+  timeToDestroy: 1
+  healthBase: {fileID: 2088867800703909088}
+--- !u!114 &2088867800703909088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeea1aa1f2e8cbc4892cf9c03a8776e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLife: 10
+  destroyOnKill: 1
+  delayToKill: 3
+  _flashColor: {fileID: 2088867800703909089}
+--- !u!114 &2088867800703909089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090786764695304946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316e297c03a5ec74db4e75fc11bd3d1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderers:
+  - {fileID: 3294411287784764205}
+  - {fileID: 4058282757918593861}
+  - {fileID: 2944600070154927280}
+  - {fileID: 8622257899716607877}
+  - {fileID: 4402658883949824882}
+  - {fileID: 3096084783782573798}
+  color: {r: 1, g: 0.3921569, b: 0.38823533, a: 1}
+  duration: 0.05
 --- !u!1 &3840710139504160895
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +631,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8392671563515255418}
   m_Bounds:
-    m_Center: {x: -0.0000009536743, y: 0.00000071525574, z: 0}
+    m_Center: {x: 0, y: 0.0000009536743, z: 0}
     m_Extent: {x: 0.48000008, y: 0.3300001, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -791,7 +898,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4031394395824172508}
   m_Bounds:
-    m_Center: {x: -0.0000011920929, y: 0.00000023841858, z: 0}
+    m_Center: {x: 0, y: -0.00000047683716, z: 0}
     m_Extent: {x: 0.31000012, y: 0.40000013, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1003,7 +1110,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3224396904485084758}
   m_Bounds:
-    m_Center: {x: -0.000000834465, y: 0.00000035762787, z: 0}
+    m_Center: {x: -0.0000019073486, y: 0.00000047683716, z: 0}
     m_Extent: {x: 0.23500009, y: 0.40500003, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1109,7 +1216,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9196861913604587219}
   m_Bounds:
-    m_Center: {x: -0.00000071525574, y: -0.00000071525574, z: 0}
+    m_Center: {x: 0, y: -0.00000047683716, z: 0}
     m_Extent: {x: 0.21000005, y: 0.4100001, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

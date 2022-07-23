@@ -39,4 +39,5 @@ public class GunBase : MonoBehaviour
         projectile.transform.position = positionToShoot.position;
         projectile.side = playerSideReference.transform.localScale.x;
     }
+
 }
