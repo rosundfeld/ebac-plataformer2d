@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20611390}
   - component: {fileID: 20611391}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32130287}
   - component: {fileID: 32130288}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 77435486}
   - component: {fileID: 77435487}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 81838074}
   - component: {fileID: 81838073}
   - component: {fileID: 81838072}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SPR_Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86586011}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ROCKS_Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 187312200}
   - component: {fileID: 187312201}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SPR_Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249465298}
   - component: {fileID: 249465299}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 290859971}
   - component: {fileID: 290859972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299441756}
   - component: {fileID: 299441757}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1037,7 +1037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320183028}
   - component: {fileID: 320183029}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: REFERENCE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,11 +1164,11 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenX: 0.24699998
+  m_ScreenY: 0.43199998
   m_CameraDistance: 15
-  m_DeadZoneWidth: 0.53
-  m_DeadZoneHeight: 2
+  m_DeadZoneWidth: 0.237
+  m_DeadZoneHeight: 1.039
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
@@ -1276,7 +1276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393855725}
   - component: {fileID: 393855726}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1375,7 +1375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498091245}
   - component: {fileID: 498091246}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1464,7 +1464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554873572}
   - component: {fileID: 554873573}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1548,7 +1548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660356751}
   - component: {fileID: 660356752}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Smoke_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,7 +1825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732307602}
   - component: {fileID: 732307603}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2178,7 +2178,7 @@ GameObject:
   - component: {fileID: 902151238}
   - component: {fileID: 902151240}
   - component: {fileID: 902151239}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SPR_Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2387,7 +2387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.001270175, y: 1.5435524, z: -15.377091}
+  m_LocalPosition: {x: 0.32810593, y: -0.49644852, z: -15.377091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2438,7 +2438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970181565}
   - component: {fileID: 970181566}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Satellite_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2522,7 +2522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 976360420}
   - component: {fileID: 976360421}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Smoke_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2606,7 +2606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1004449737}
   - component: {fileID: 1004449738}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2690,7 +2690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018858487}
   - component: {fileID: 1018858488}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2892,7 +2892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027659023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6360428, y: -13.28, z: -0.3182113}
+  m_LocalPosition: {x: -14.8, y: -13.28, z: -0.3182113}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2958,7 +2958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136701575}
   - component: {fileID: 1136701576}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3042,7 +3042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156000218}
   - component: {fileID: 1156000219}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3197,11 +3197,6 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7301150156096908687, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
   m_PrefabInstance: {fileID: 1289331186}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1223875930 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4291896749423777614, guid: 3de838754c767a446a5473969062a84e, type: 3}
-  m_PrefabInstance: {fileID: 2088867800703909079}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1229061965 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3381466231696810971, guid: 00afc9fb4087652419d090da0b825d97, type: 3}
@@ -3278,7 +3273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1253004187}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ART
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3320,7 +3315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1259020182}
   - component: {fileID: 1259020183}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3729,7 +3724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289562291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.001270175, y: 1.5435524, z: -15.377091}
+  m_LocalPosition: {x: 0.32810593, y: -0.49644852, z: -15.377091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3747,7 +3742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293622188}
   - component: {fileID: 1293622189}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3831,7 +3826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1295249154}
   - component: {fileID: 1295249155}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Smoke_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3914,7 +3909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309814456}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PLANETS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3957,7 +3952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316762263}
   - component: {fileID: 1316762264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4046,7 +4041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370693531}
   - component: {fileID: 1370693532}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SPR_Gradient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4129,7 +4124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370797230}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ROCKS_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4208,7 +4203,7 @@ GameObject:
   - component: {fileID: 1410520037}
   - component: {fileID: 1410520039}
   - component: {fileID: 1410520038}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SPR_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4349,7 +4344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1410825986}
   - component: {fileID: 1410825987}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4430,10 +4425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 42029713}
     m_Modifications:
-    - target: {fileID: 1474129648, guid: e0d57717ad485d748986ddb9eba2beb8, type: 3}
-      propertyPath: delayToKill
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2944973745361044811, guid: e0d57717ad485d748986ddb9eba2beb8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4559,7 +4550,7 @@ GameObject:
   - component: {fileID: 1612964013}
   - component: {fileID: 1612964012}
   - component: {fileID: 1612964011}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SPR_Floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4733,7 +4724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625555145}
   - component: {fileID: 1625555146}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4827,7 +4818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767217708}
   - component: {fileID: 1767217709}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4977,7 +4968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839522276}
   - component: {fileID: 1839522277}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5099,7 +5090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918161735}
   - component: {fileID: 1918161736}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rock_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5260,7 +5251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2077237144}
   - component: {fileID: 2077237145}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5343,7 +5334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2108704447}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SMOKE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5435,27 +5426,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8073972946613542793, guid: 3de838754c767a446a5473969062a84e, type: 3}
   m_PrefabInstance: {fileID: 2088867800703909079}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2088867800703909081 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3090786764695304946, guid: 3de838754c767a446a5473969062a84e, type: 3}
-  m_PrefabInstance: {fileID: 2088867800703909079}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2088867800703909091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088867800703909081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6fbe1132789e314893042f108a911ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 106706806888435591, guid: 99f6323f027269241aa0b019a63b8761, type: 3}
-  positionToShoot: {fileID: 1223875930}
-  timeBetweenShoot: 1
-  enemySide: {fileID: 2088867800703909080}
 --- !u!1001 &6920624796685245242
 PrefabInstance:
   m_ObjectHideFlags: 0
