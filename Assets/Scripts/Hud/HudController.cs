@@ -12,6 +12,6 @@ public class HudController : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI coinCounter;
     
     private void Update() {
-        
+        coinCounter.text = "x" + itensManager.coins.ToString();
     }
 }

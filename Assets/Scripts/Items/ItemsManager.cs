@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ebac.core.Singleton;
 using UnityEngine.UI;
+using TMPro;
 
 public class ItemsManager : Singleton<ItemsManager>
 {
     public int coins;
-    public Text coinsConterText;
-
-    private void Update() {
-        coinsConterText.text = "x" + coins.ToString();
-    }
 
     private void Start()
     {

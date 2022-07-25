@@ -320,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42029712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9, y: -12.6, z: -0.5025408}
+  m_LocalPosition: {x: 16.6, y: -2.5, z: -0.5025408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1012,7 +1012,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
-  coinsConterText: {fileID: 0}
 --- !u!4 &314699653
 Transform:
   m_ObjectHideFlags: 0
@@ -4511,7 +4510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578772633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.982, y: 0, z: 0}
+  m_LocalPosition: {x: 2.57, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5091,11 +5090,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1915131901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba3c8e0609bb497469e411cb17ae1368, type: 3}
+  m_Script: {fileID: 11500000, guid: 22af01c3cbdb2c54fb7671afd453a102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
-  coinsConterText: {fileID: 0}
+  itensManager: {fileID: 314699652}
+  coinCounter: {fileID: 1271711488}
 --- !u!1 &1918161734
 GameObject:
   m_ObjectHideFlags: 0
