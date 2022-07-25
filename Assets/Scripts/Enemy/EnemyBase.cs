@@ -66,12 +66,12 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    private void PlayAttackAnimation()
+    public void PlayAttackAnimation()
     {
         animator.SetTrigger(triggerAttack);
     }
 
-    private void PlayDeathAnimation()
+    public void PlayDeathAnimation()
     {
         animator.SetTrigger(triggerDeath);
     }

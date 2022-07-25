@@ -15,10 +15,6 @@ public class ProjectileBase : MonoBehaviour
     private void Awake()
     {
         Destroy(gameObject, timeToDestroy);
-        if (gameObject.CompareTag("Enemy"))
-        {
-            isEnemy = true;
-        }
     }
     void Update()
     {
@@ -30,22 +26,23 @@ public class ProjectileBase : MonoBehaviour
         var enemy = collision.transform.GetComponent<EnemyBase>();
         var player = collision.transform.GetComponent<Player>();
 
-
-        if (isEnemy == false)
+        if (enemy != null)
         {
-            if (enemy != null)
-            {
+            
+                Debug.Log("Entrou Monstro");
                 enemy.Damage(damageAmount);
                 Destroy(gameObject);
-            }
+            
         }
-        else
+        else if (player != null)
         {
-            if (player != null)
+            if (collision.gameObject.CompareTag("Player"))
             {
+                Debug.Log("Entrou Player");
                 player.healthBase.Damage(damageAmount);
                 Destroy(gameObject);
             }
+            
         }
     }
 }

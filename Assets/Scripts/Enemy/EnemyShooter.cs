@@ -11,27 +11,35 @@ public class EnemyShooter : EnemyBase
     public Transform enemySide;
 
     private Coroutine _currentCoroutine;
+    private bool _shooting = false;
 
     void Update()
     {
-        if (checkIfPlayerIsNear())
+        if (!_shooting)
         {
-            _currentCoroutine = StartCoroutine(StartShoot());
+            if (checkIfPlayerIsNear())
+            {
+                _currentCoroutine = StartCoroutine(StartShoot());
+            }
+            else
+                if (_currentCoroutine != null)
+                StopCoroutine(_currentCoroutine);
         }
-        else
-            if (_currentCoroutine != null)
-                    StopCoroutine(_currentCoroutine);
-        }
+    }
 
     IEnumerator StartShoot()
     {
+        _shooting = true;
         Shoot();
-        Debug.Log("Famoso segundo");
         yield return new WaitForSeconds(timeBetweenShoot);
+        _shooting = false;
+        _currentCoroutine = null;
+
     }
 
     private void Shoot()
     {
+        PlayAttackAnimation();
         var projectile = Instantiate(prefabProjectile);
         projectile.transform.position = positionToShoot.position;
         projectile.side = enemySide.transform.localScale.x;
