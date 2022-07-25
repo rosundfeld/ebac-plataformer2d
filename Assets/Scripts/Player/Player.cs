@@ -33,15 +33,32 @@ public class Player : MonoBehaviour
     public string boolWalk = "Walk";
     public string boolLand = "Land";
     public string triggerJump = "Jump";
+    public string triggerDeath = "Death";
+
+    [Header("Health Base")]
+    public HealthBase healthBase;
 
 
     public Animator animator;
     private void Update()
     {
-        Debug.Log(myRigidbody.velocity.x);
         checkIfPlayerisFalling();
         HandleJump();
         HandleMoviment();
+    }
+
+    private void Awake()
+    {
+        if (healthBase != null)
+        {
+            healthBase.OnKill += OnPlayerKill;
+        }
+    }
+
+    private void OnPlayerKill()
+    {
+        healthBase.OnKill -= OnPlayerKill;
+        animator.SetTrigger(triggerDeath);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -100,7 +117,8 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             _currentSpeed = speedRun;
-            if((myRigidbody.velocity.x > 1 || myRigidbody.velocity.x < -1)) {
+            if ((myRigidbody.velocity.x > 1 || myRigidbody.velocity.x < -1))
+            {
                 animator.SetBool(boolRun, true);
             }
         }
@@ -162,6 +180,11 @@ public class Player : MonoBehaviour
             animator.SetBool(triggerJump, true);
             handleScaleJump();
         }
+    }
+
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
     }
 
 }
