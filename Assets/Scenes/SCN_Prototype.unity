@@ -320,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42029712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.59, y: -1.88, z: -0.5025408}
+  m_LocalPosition: {x: 3.9, y: -12.6, z: -0.5025408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1012,6 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
+  coinsConterText: {fileID: 0}
 --- !u!4 &314699653
 Transform:
   m_ObjectHideFlags: 0
@@ -1165,16 +1166,16 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.24699998
-  m_ScreenY: 0.43199998
+  m_ScreenY: 0.42400002
   m_CameraDistance: 15
-  m_DeadZoneWidth: 0.237
-  m_DeadZoneHeight: 1.039
+  m_DeadZoneWidth: 0.305
+  m_DeadZoneHeight: 0.178
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
   m_SoftZoneHeight: 2
   m_BiasX: 0
-  m_BiasY: 0
+  m_BiasY: 0.00000036143942
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -2387,7 +2388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32810593, y: -0.49644852, z: -15.377091}
+  m_LocalPosition: {x: 0.32810688, y: -0.7364464, z: -15.377091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3447,7 +3448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x 18
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3474,7 +3475,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3724,7 +3725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289562291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32810593, y: -0.49644852, z: -15.377091}
+  m_LocalPosition: {x: 0.32810688, y: -0.7364464, z: -15.377091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5051,6 +5052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1915131902}
+  - component: {fileID: 1915131903}
   m_Layer: 5
   m_Name: HUD_Coins
   m_TagString: Untagged
@@ -5080,6 +5082,20 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: -4}
   m_SizeDelta: {x: 292.1648, y: 122.7414}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1915131903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915131901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3c8e0609bb497469e411cb17ae1368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 0
+  coinsConterText: {fileID: 0}
 --- !u!1 &1918161734
 GameObject:
   m_ObjectHideFlags: 0
