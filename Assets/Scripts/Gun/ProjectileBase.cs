@@ -28,8 +28,6 @@ public class ProjectileBase : MonoBehaviour
 
         if (enemy != null)
         {
-            
-                Debug.Log("Entrou Monstro");
                 enemy.Damage(damageAmount);
                 Destroy(gameObject);
             
@@ -38,7 +36,6 @@ public class ProjectileBase : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Entrou Player");
                 player.healthBase.Damage(damageAmount);
                 Destroy(gameObject);
             }
