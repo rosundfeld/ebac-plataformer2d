@@ -5,13 +5,11 @@ using Ebac.core.Singleton;
 using UnityEngine.UI;
 using TMPro; //usado para declarar o TextMeshProUGUI
 
-public class HudController : MonoBehaviour {
+public class HudController : Singleton<HudController> {
 
-    public ItemsManager itensManager;
+    public TextMeshProUGUI coinCounter;
 
-    [SerializeField] private TextMeshProUGUI coinCounter;
-    
-    private void Update() {
-        coinCounter.text = "x" + itensManager.coins.ToString();
+    public static void UpdateTextCoins(string s) { //Statico não está no mesmo contexto da Classe, ou seja vamos acessar o CoinCounter com o proprio Singleton, assim a função vai aparecer nas outras classes
+        Instance.coinCounter.text = s;
     }
 }
